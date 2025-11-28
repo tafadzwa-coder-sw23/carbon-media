@@ -1,8 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { CarbonInputData, CalculationResult, Recommendation } from '../types';
 
-const apiKey = process.env.API_KEY || '';
-const ai = new GoogleGenAI({ apiKey });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const generateSustainabilityReport = async (
   data: CarbonInputData,
